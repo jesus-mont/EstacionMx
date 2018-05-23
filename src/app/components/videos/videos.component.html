@@ -1,0 +1,23 @@
+<button ><a routerLink="/agregar-video">agregar Video</a></button> 
+<table>
+<thead>
+  <tr>
+    <th>Titulo</th>
+    <th>fecha</th>
+    <th>Descripcion</th>
+    <th>Enlace</th>
+    <th>eliminar</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor=" let video of videos" >
+    <td>{{video.titulo}}</td>
+    <td>{{video.fecha}}</td>
+    
+    <td><a href="{{video.url}}">{{video.url}}</a>
+    </td>
+    <td><button (click)="deleteVideo(video._id)"><a class="waves-effect waves-light btn-small">
+      <i class="material-icons left">delete</i>eliminar</a></button></td>
+  </tr>
+</tbody>
+</table>

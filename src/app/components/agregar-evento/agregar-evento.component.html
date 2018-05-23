@@ -1,0 +1,11 @@
+
+<form  class="form-control" (submit)="enviar($event)" class="container">
+  <p>ImagenP</p><input type="text" name="imagenP" [(ngModel)]="imagenP">
+  <p>Nombre Evento</p><input type="text" name="nombreEvent" [(ngModel)]="nombreEvent"> 
+  <p>Descripcion</p><textarea name="descripcionP" [(ngModel)]="descripcionP"></textarea>
+  <p>fecha</p><input type="datetime-local" name="fecha" [(ngModel)]="fecha">
+  <p>link Boletos</p><input type="text" name="linkBoletos" [(ngModel)]="linkBoletos">
+  <p>Video</p><input type="text" name="video" [(ngModel)]="video">
+  <button type="submit">Enviar</button>
+
+</form>

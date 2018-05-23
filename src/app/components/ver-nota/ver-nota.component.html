@@ -1,0 +1,31 @@
+
+<button (click)="modificar()">modificar</button>
+<form  class="form-control" (submit)="enviar($event)" class="container">
+  <h1>ImagenP</h1> 
+    <img width="400" higth="300"src="{{noticia.imagenP}}" alt="">
+  <h1>Titulo</h1>
+    <input type="text" name="noticia.tituloP" [(ngModel)]="noticia.tituloP"  [disabled]=(editar)> 
+  <h2>TituloS</h2>
+    <input type="text" name="noticia.tituloS" [(ngModel)]="noticia.tituloS" [disabled]=(editar)>
+  <h3>Descripcion</h3>
+    <input type="text" name="descripcion" [(ngModel)]="noticia.descripcion" [disabled]=(editar)>
+  <p>ImagenS</p>
+    <img width="400" higth="300" src="{{noticia.imagenS}}" alt="">
+  <p>fecha</p>
+    <input type="datetime-local" name="noticia.fecha" [(ngModel)]="noticia.fecha" [disabled]=(editar)>
+  <p>texto</p>
+    <textarea rows="10" cols="40" type="text" name="noticia.texto" [(ngModel)]="noticia.texto" [disabled]=(editar)></textarea>
+  <p>editor</p>
+    <input type="text" name="noticia.editor" [(ngModel)]="noticia.editor" [disabled]=(editar)>
+  <p>categoria</p>
+    <input type="text" name="noticia.categoria" [(ngModel)]="noticia.categoria" [disabled]=(editar)>
+  <p>imagenes</p>
+    <input type="text" name="noticia.linksimg" [(ngModel)]="noticia.linksimg" [disabled]=(editar)>
+  <p>linkf</p>
+    <input type="text" name="noticia.linkf" [(ngModel)]="linkf" [disabled]=(editar)>
+  <p>Video</p>
+    <input type="text" name="noticia.video" [(ngModel)]="noticia.video" [disabled]=(editar)>
+  <button type="submit">Enviar</button>
+</form>
+ 
+  

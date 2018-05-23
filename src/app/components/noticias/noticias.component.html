@@ -1,0 +1,21 @@
+<button ><a routerLink="/agregar-noticia">agregar noticia</a></button> 
+<table>
+<thead>
+  <tr>
+    <th>titulo</th>
+    <th>fecha</th>
+    <th>Categoria</th>
+    <th>eliminar</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor=" let noticia of noticias" >
+    <td><a  routerLink='/noticias/{{noticia._id}}'>{{noticia.tituloP}}</a></td>
+    <td>{{noticia.fecha}}</td>
+    <td>{{noticia.categoria}}
+    </td>
+    <td><button (click)="deleteNoticia(noticia._id)"><a class="waves-effect waves-light btn-small">
+      <i class="material-icons left">delete</i>eliminar</a></button></td>
+  </tr>
+</tbody>
+</table>

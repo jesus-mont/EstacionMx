@@ -1,0 +1,19 @@
+<button ><a routerLink="/agregar-evento">agregar evento</a></button> 
+<table>
+<thead>
+  <tr>
+    <th>Evento</th>
+    <th>fecha</th>
+    <th>eliminar</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor=" let evento of eventos" >
+    <td>{{evento.nombreEvent}}</td>
+    <td>{{evento.fecha}}</td>
+
+    <td><button (click)="deleteEvento(evento._id)"><a class="waves-effect waves-light btn-small">
+      <i class="material-icons left">delete</i>eliminar</a></button></td>
+  </tr>
+</tbody>
+</table>
