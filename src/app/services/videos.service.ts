@@ -20,7 +20,8 @@ domain: string= "https://estacionmx-api.herokuapp.com/api/videos";
     return this.http.post<Videos>(`${this.domain}`, newVideo).map(res=>res)
   }
   putVideo(newVideo){
-    return this.http.put(`${this.domain}/${newVideo.id}`,newVideo).map(res=>res)
+    console.log(newVideo)
+    return this.http.put<Videos>(`${this.domain}/${newVideo._id}`,newVideo).map(res=>res)
   }
   deleteVideo(id){
     return this.http.delete(`${this.domain}/${id}`).map(res=>res)

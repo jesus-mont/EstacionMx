@@ -9,7 +9,7 @@
 </thead>
 <tbody>
   <tr *ngFor=" let evento of eventos" >
-    <td>{{evento.nombreEvent}}</td>
+    <td><a  routerLink='/eventos/{{evento._id}}'>{{evento.nombreEvent}}</a></td>
     <td>{{evento.fecha}}</td>
 
     <td><button (click)="deleteEvento(evento._id)"><a class="waves-effect waves-light btn-small">

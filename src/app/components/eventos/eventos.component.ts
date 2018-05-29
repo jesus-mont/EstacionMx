@@ -12,32 +12,28 @@ export class EventosComponent implements OnInit {
   eventos: Eventos[];
 
   constructor(private EventosService: EventosService ) {
-    this.EventosService.getEventos().subscribe(eventos =>{
-      this.eventos=eventos
-      
-      
-    })
+    this.llenartabla()
   }
   
 
   ngOnInit() {
   }
-
+llenartabla(){
+  this.EventosService.getEventos().subscribe(eventos =>{
+    this.eventos=eventos})
+}
   deleteEvento(id){
     const response =confirm('estas seguro de que quieres eliminar este evento?')
     console.log(id)
     if(response){
       const eventos=this.eventos;
-      this.EventosService.deleteEvento(id).subscribe((data:any)=>
+      this.EventosService.deleteEvento(id).subscribe(data=>
       {console.log(data)
-        if(data.n==1){
-        for(let i=0; i<eventos.length; i++){
-          if(eventos[i]._id==id){
-            eventos.splice(i,1);}
-        }
-      }
+
+       
     })
     }
+    this.llenartabla()
     return;
  }
 

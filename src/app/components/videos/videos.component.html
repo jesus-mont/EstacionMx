@@ -4,14 +4,14 @@
   <tr>
     <th>Titulo</th>
     <th>fecha</th>
-    <th>Descripcion</th>
+    
     <th>Enlace</th>
     <th>eliminar</th>
   </tr>
 </thead>
 <tbody>
   <tr *ngFor=" let video of videos" >
-    <td>{{video.titulo}}</td>
+    <td><a  routerLink='/videos/{{video._id}}'>{{video.titulo}}</a></td>
     <td>{{video.fecha}}</td>
     
     <td><a href="{{video.url}}">{{video.url}}</a>

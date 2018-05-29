@@ -1,10 +1,11 @@
 export class Eventos{
-    imagenP:string; 
-    nombreEvent:string;
+    imagen:String; 
+    nombreEvent:String;
     fecha: Date;
-    descripcionP:string;
-    linkBoletos:string;
-    video:string;
+    descripcionP:String;
+    linkBoletos:String;
+    video:String;
+    categoria:String
     _id?: string;
     n?:number
 }

@@ -15,7 +15,8 @@ import { AgregarVideoComponent } from './components/agregar-video/agregar-video.
 import {routes} from './app.routes';
 import {FormsModule} from '@angular/forms';
 import { VerNotaComponent } from './components/ver-nota/ver-nota.component';
-
+import { VerEventoComponent } from './components/ver-evento/ver-evento.component';
+import { VerVideoComponent } from './components/ver-video/ver-video.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,9 @@ import { VerNotaComponent } from './components/ver-nota/ver-nota.component';
     VideosComponent,
     AgregarEventoComponent,
     AgregarVideoComponent,
-    VerNotaComponent
+    VerNotaComponent,
+    VerEventoComponent,
+    VerVideoComponent
   ],
   imports: [
     BrowserModule,

@@ -17,14 +17,15 @@ domain: string= "https://estacionmx-api.herokuapp.com/api/eventos";
     
   }
   postEventos(newEvento: Eventos){
+    console.log(newEvento)
     return this.http.post<Eventos>(`${this.domain}`, newEvento).map(res=>res)
     
   }
   putEvento(newEvento){
-    return this.http.put(`${this.domain}/${newEvento.id}`,newEvento).map(res=>res)
+    return this.http.put(`${this.domain}/${newEvento._id}`,newEvento).map(res=>res)
   }
   deleteEvento(id){
-    return this.http.delete(`${this.domain}/${id}`).map(res=>res)
+    return this.http.delete<Eventos>(`${this.domain}/${id}`).map(res=>res)
   }
 
 }

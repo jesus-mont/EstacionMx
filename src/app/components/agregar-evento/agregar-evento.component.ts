@@ -7,12 +7,13 @@ import {Eventos} from '../../Eventos';
   styleUrls: ['./agregar-evento.component.css']
 })
 export class AgregarEventoComponent implements OnInit {
-  imagenP:string; 
-  nombreEvent:string;
+  imagenP:String; 
+  nombreEvent:String;
   fecha: Date;
-  descripcionP:string;
-  linkBoletos:string;
-  video:string;
+  descripcionP:String;
+  linkBoletos:String;
+  video:String;
+  categoria:String;
   constructor(private eventosService: EventosService) { }
 
   ngOnInit() {
@@ -21,19 +22,20 @@ export class AgregarEventoComponent implements OnInit {
     event.preventDefault();
     
   const newEvento: Eventos= {
-    imagenP:this.imagenP,
+    imagen:this.imagenP,
     nombreEvent:this.nombreEvent,
     descripcionP: this.descripcionP,
     fecha:this.fecha,
     linkBoletos:this.linkBoletos,
-    video:this.video
+    video:this.video,
+    categoria:this.categoria
     
    };
   
-   console.log(newEvento.imagenP)
+   console.log(newEvento.imagen)
     this.eventosService.postEventos(newEvento).subscribe(data => {
       alert('ok');
-      console.log(data)
+      
   }, error => {
     console.log(error.json());
   });

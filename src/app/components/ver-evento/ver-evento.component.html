@@ -1,0 +1,13 @@
+
+<button (click)="modificar()">modificar</button>
+<form  class="form-control" (submit)="enviar($event)" class="container">
+ <img width="400" higth="300" src="{{evento.imagenP}}" alt="">
+  <p>Nombre Evento</p><input type="text" name="nombreEvent" [(ngModel)]="evento.nombreEvent" [disabled]=(editar)> 
+  <p>Descripcion</p><textarea name="descripcionP" [(ngModel)]="evento.descripcionP" [disabled]=(editar)></textarea>
+  <p>fecha</p><input type="datetime-local" name="fecha" [(ngModel)]="evento.fecha" [disabled]=(editar)>
+  <p>link Boletos</p><input type="text" name="linkBoletos" [(ngModel)]="evento.linkBoletos" [disabled]=(editar)>
+  <p>Video</p><input type="text" name="video" [(ngModel)]="evento.video" [disabled]=(editar)>
+  <p>Categoria</p><input type="text" name="categoria" [(ngModel)]="evento.categoria" [disabled]=(editar)>
+  <button type="submit">Enviar</button>
+
+</form>

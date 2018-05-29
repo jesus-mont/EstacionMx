@@ -1,0 +1,14 @@
+
+<button (click)="modificar()">modificar</button>
+<form  class="form-control" (submit)="enviar($event)" class="container">
+    
+  <p>Titulo</p><input type="text" name="titulo" [(ngModel)]="video.titulo" [disabled]=(editar)> 
+  <p>Imagen</p><input type="text" name="imagen" [(ngModel)]="video.imagen" [disabled]=(editar)> 
+  
+  <p>Descripcion</p><input type="text" name="descripcion" [(ngModel)]="video.descripcion" [disabled]=(editar)>
+  <p>url</p><input type="text" name="url" [(ngModel)]="video.url">
+  <p>fecha</p><input type="datetime-local" name="fecha" [(ngModel)]="video.fecha" [disabled]=(editar)>
+  
+  <button type="submit">Enviar</button>
+
+</form>

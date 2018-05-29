@@ -21,7 +21,7 @@ categoria:string;
 linksimg:string;
 linkf:string;
 video:string;
-
+categorias=["Local ",  "Estatal", "Sociales"," Deportivo"," Modas", "Cultural", "Educacion"];
   constructor(private noticiasService: NoticiasService) { }
 
   ngOnInit() {
